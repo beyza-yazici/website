@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "aboutUs": "Hakkımızda",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "sustainability": "Sürdürülebilirlik",
+    "contact": "İletişim"
+  },
+  "search": {
+    "placeholder": "Ara..."
+  }
+}

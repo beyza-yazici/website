@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "aboutUs": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "sustainability": "Sustainability",
+    "contact": "Contact"
+  },
+  "search": {
+    "placeholder": "Search..."
+  }
+}
