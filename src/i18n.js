@@ -5,6 +5,18 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import enTranslation from "./locales/en/translation.json";
 import trTranslation from "./locales/tr/translation.json";
 
+const getUserLanguage = () => {
+
+  const browserLang = navigator.language || navigator.userLanguage;
+
+
+  if (browserLang.toLowerCase().startsWith('tr')) {
+    return 'tr';
+  }
+
+  return 'en';
+};
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -17,6 +29,7 @@ i18n
         translation: trTranslation,
       },
     },
+    lng: getUserLanguage(),
     fallbackLng: "en",
     interpolation: {
       escapeValue: false,

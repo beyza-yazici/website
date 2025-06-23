@@ -29,6 +29,7 @@ const Header = () => {
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
+        localStorage.setItem('userLanguage', lng);
         setIsLangMenuOpen(false);
     };
 
@@ -70,7 +71,7 @@ const Header = () => {
                                 <img
                                     src={`/flags/${i18n.language}.png`}
                                     alt={i18n.language}
-                                    className="w-8 h-6 transition duration-300 group-hover:opacity-70 cursor-pointer"
+                                    className="w-10 h-10 transition duration-300 group-hover:opacity-70 cursor-pointer"
                                 />
                             </button>
 
@@ -94,7 +95,7 @@ const Header = () => {
                                         <img
                                             src="/flags/tr.png"
                                             alt="Türkçe"
-                                            className="w-8 h-6 transition duration-300 hover:opacity-70 cursor-pointer"
+                                            className="w-9 h-9 transition duration-300 hover:opacity-70 cursor-pointer"
                                         />
                                         <span className="text-gray-800 text-lg">Türkçe</span>
                                     </button>
