@@ -8,5 +8,16 @@
   },
   "search": {
     "placeholder": "Search..."
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "slogan": "This website was created with love to manifest a future company <3",
+    "paragraphs": {
+      "p1": "I'm Burak Ayyildiz. My journey in civil and structural engineering has always been shaped by the aim of creating not just robust structures, but also sustainable and aesthetic solutions. After completing my bachelor's degree in Civil Engineering at Balikesir University, I pursued my master's degree in Sustainable Building and Structural Engineering at the University of Liverpool in England.",
+      "p2": "To date, I have worked on numerous projects both in Turkey and England, both on-site and in design offices. When establishing my own company, my primary goal was to present my work not just as an engineering service, but as a solution-oriented, reliable, and sustainable building approach. I approach each project with great diligence, striving to meet client expectations while adhering to engineering principles and aesthetics.",
+      "p3": "For me, engineering is not just about calculations; it's also a process of creating innovative solutions. I'm always open to learning, developing, and doing better in this journey.",
+      "p4": "However, one of the things I value most in this journey is the mark we leave on the world. Producing with not just today but the future in mind, using resources efficiently, and building environmentally conscious structures is part of my professional responsibility.",
+      "p5": "I set out with a vision focused not on profit, but on impact; building not just for today, but for tomorrow. I see engineering not just as a technical profession, but as a contribution to humanity in leaving a better life for the future world."
+    }
   }
 }
