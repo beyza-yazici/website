@@ -1,12 +1,14 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { BiSearch } from 'react-icons/bi';
+import { HiMenu } from 'react-icons/hi';
+import { IoClose } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
     const dropdownRef = useRef(null);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
     const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
@@ -25,6 +27,11 @@ const Header = () => {
 
     const toggleSearch = () => {
         setIsSearchOpen(!isSearchOpen);
+        setIsMobileMenuOpen(false);
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     const changeLanguage = (lng) => {
@@ -35,15 +42,23 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-[#383838] text-white h-[100px] flex items-center">
-                <div className="container mx-auto px-1 flex justify-between items-center">
+            <header className="bg-[#383838] text-white h-[100px] flex items-center relative">
+                <div className="container mx-auto px-4 flex justify-between items-center">
                     {/* Logo */}
-                    <div className="text-2xl font-light pl-1">
+                    <div className="text-2xl font-light">
                         <Link to="/">LOGO</Link>
                     </div>
 
-                    {/* Navigation Menu */}
-                    <div className="flex items-center gap-10">
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="lg:hidden text-white p-2"
+                        onClick={toggleMobileMenu}
+                    >
+                        {isMobileMenuOpen ? <IoClose size={28} /> : <HiMenu size={28} />}
+                    </button>
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center gap-10">
                         <nav className="flex space-x-10">
                             <Link to="/about-us" className="hover:text-gray-300 transition duration-300 text-2xl">
                                 {t('nav.aboutUs')}
@@ -76,7 +91,7 @@ const Header = () => {
                             </button>
 
                             {isLangMenuOpen && (
-                                <div className="absolute top-full right-0 mt-4 bg-white rounded-lg shadow-lg min-w-[160px]">
+                                <div className="absolute top-full right-0 mt-4 bg-white rounded-lg shadow-lg min-w-[160px] z-50">
                                     <button
                                         onClick={() => changeLanguage('en')}
                                         className="flex items-center space-x-3 px-6 py-3 w-full rounded-t-lg transition duration-300 hover:bg-gray-100 cursor-pointer"
@@ -106,22 +121,85 @@ const Header = () => {
                         {/* Search Icon */}
                         <button
                             onClick={toggleSearch}
-                            className="text-white cursor-pointer hover:text-gray-300 transition duration-300 ml-6 mr-1"
+                            className="p-2 hover:bg-gray-700 rounded transition duration-300 cursor-pointer"
                         >
                             <BiSearch size={25} />
                         </button>
                     </div>
                 </div>
+
+                {/* Mobile Menu */}
+                <div
+                    className={`lg:hidden fixed top-[100px] left-0 right-0 bg-[#383838] transition-transform duration-300 ease-in-out transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                        } z-40`}
+                >
+                    <nav className="flex flex-col p-4">
+                        <Link
+                            to="/about-us"
+                            className="py-3 px-4 text-xl hover:bg-gray-700 rounded"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {t('nav.aboutUs')}
+                        </Link>
+                        <Link
+                            to="/services"
+                            className="py-3 px-4 text-xl hover:bg-gray-700 rounded"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {t('nav.services')}
+                        </Link>
+                        <Link
+                            to="/projects"
+                            className="py-3 px-4 text-xl hover:bg-gray-700 rounded"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {t('nav.projects')}
+                        </Link>
+                        <Link
+                            to="/sustainability"
+                            className="py-3 px-4 text-xl hover:bg-gray-700 rounded"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {t('nav.sustainability')}
+                        </Link>
+                        <Link
+                            to="/contact"
+                            className="py-3 px-4 text-xl hover:bg-gray-700 rounded"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {t('nav.contact')}
+                        </Link>
+
+                        {/* Mobile Language and Search */}
+                        <div className="flex items-center justify-between p-4 border-t border-gray-600 mt-4">
+                            <div className="flex items-center gap-4">
+                                <button onClick={() => changeLanguage('en')} className="flex items-center gap-2">
+                                    <img src="/flags/en.png" alt="English" className="w-8 h-6" />
+                                    <span>EN</span>
+                                </button>
+                                <button onClick={() => changeLanguage('tr')} className="flex items-center gap-2">
+                                    <img src="/flags/tr.png" alt="Türkçe" className="w-8 h-6" />
+                                    <span>TR</span>
+                                </button>
+                            </div>
+                            <button onClick={toggleSearch} className="p-2">
+                                <BiSearch size={25} />
+                            </button>
+                        </div>
+                    </nav>
+                </div>
             </header>
 
             {/* Search Dropdown */}
-            <div className={`w-full bg-white shadow-lg border-t overflow-hidden transition-all duration-300 ease-in-out ${isSearchOpen ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
-                }`}>
+            <div
+                className={`w-full bg-white shadow-lg border-t overflow-hidden transition-all duration-300 ease-in-out ${isSearchOpen ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+            >
                 <div className="container mx-auto px-4 py-6">
                     <input
                         type="search"
                         placeholder={t('search.placeholder')}
-                        className="w-full text-gray-800 text-4xl focus:outline-none border-b-2 border-gray-300 pb-2 placeholder-gray-400"
+                        className="w-full text-gray-800 text-4xl md:text-2xl focus:outline-none border-b-2 border-gray-300 pb-2 placeholder-gray-400"
                     />
                 </div>
             </div>
