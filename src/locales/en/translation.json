@@ -18,6 +18,16 @@
       "p3": "For me, engineering is not just about calculations; it's also a process of creating innovative solutions. I'm always open to learning, developing, and doing better in this journey.",
       "p4": "However, one of the things I value most in this journey is the mark we leave on the world. Producing with not just today but the future in mind, using resources efficiently, and building environmentally conscious structures is part of my professional responsibility.",
       "p5": "I set out with a vision focused not on profit, but on impact; building not just for today, but for tomorrow. I see engineering not just as a technical profession, but as a contribution to humanity in leaving a better life for the future world."
+    },
+    "footer": {
+      "usefulLinks": "Useful Links",
+      "contactInfo": "Contact Info",
+      "followUs": "Follow Us",
+      "companyDescription": "Company description goes here...",
+      "address": "Company address goes here...",
+      "allRightsReserved": "All rights reserved.",
+      "email": "Email",
+      "tel": "Tel"
     }
   }
 }

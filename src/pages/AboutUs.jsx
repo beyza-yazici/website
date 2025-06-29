@@ -8,16 +8,16 @@ const AboutUs = () => {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             className="min-h-screen bg-white"
         >
             {/* Title Section */}
             <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 1 }}
                 className="container mx-auto px-4 py-8"
             >
                 <h1 className="text-[#4A4A4A] text-5xl font-bold">
@@ -26,81 +26,79 @@ const AboutUs = () => {
 
                 {/* Slogan */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6, duration: 1 }}
                     className="mt-8 mb-8"
                 >
                     <h2 className="text-[#6B7280] text-4xl italic font-light">
-                        {t('aboutUs.slogan')} {/* i18n dosyanıza slogan metnini eklemeyi unutmayın */}
+                        {t('aboutUs.slogan')}
                     </h2>
                 </motion.div>
             </motion.div>
 
-            {/* Hero Section with Image */}
+            {/* Hero Section with Image and Content */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="w-full relative"
-            >
-                <div className="w-full aspect-[21/9] md:aspect-[16/7] lg:aspect-[2/1] relative">
-                    <img
-                        src="/images/us.jpg"
-                        alt="About Us Hero"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-            </motion.div>
-
-            {/* Content Section */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9, duration: 1 }}
                 className="container mx-auto px-4 py-16"
             >
-                <div className="max-w-6xl mx-auto space-y-8">
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.2, duration: 0.6 }}
-                        className="text-2xl leading-relaxed text-gray-700"
-                    >
-                        {t('aboutUs.paragraphs.p1')}
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.4, duration: 0.6 }}
-                        className="text-2xl leading-relaxed text-gray-700"
-                    >
-                        {t('aboutUs.paragraphs.p2')}
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.6, duration: 0.6 }}
-                        className="text-2xl leading-relaxed text-gray-700"
-                    >
-                        {t('aboutUs.paragraphs.p3')}
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.8, duration: 0.6 }}
-                        className="text-2xl leading-relaxed text-gray-700"
-                    >
-                        {t('aboutUs.paragraphs.p4')}
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 2, duration: 0.6 }}
-                        className="text-2xl leading-relaxed text-gray-700"
-                    >
-                        {t('aboutUs.paragraphs.p5')}
-                    </motion.p>
+                <div className="flex flex-col lg:flex-row gap-12 items-start">
+                    {/* Image */}
+                    <div className="lg:w-3/4">
+                        <img
+                            src="/images/burak.jpg"
+                            alt="About Us Hero"
+                            className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                        />
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="lg:w-3/5">
+                        <div className="space-y-8">
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 1.5, duration: 1 }}
+                                className="text-2xl leading-relaxed text-gray-700 italic"
+                            >
+                                {t('aboutUs.paragraphs.p1')}
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 1.8, duration: 1 }}
+                                className="text-2xl leading-relaxed text-gray-700 italic"
+                            >
+                                {t('aboutUs.paragraphs.p2')}
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 2.1, duration: 1 }}
+                                className="text-2xl leading-relaxed text-gray-700 italic"
+                            >
+                                {t('aboutUs.paragraphs.p3')}
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 2.4, duration: 1 }}
+                                className="text-2xl leading-relaxed text-gray-700 italic"
+                            >
+                                {t('aboutUs.paragraphs.p4')}
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 2.7, duration: 1 }}
+                                className="text-2xl leading-relaxed text-gray-700 italic"
+                            >
+                                {t('aboutUs.paragraphs.p5')}
+                            </motion.p>
+                        </div>
+                    </div>
                 </div>
             </motion.div>
         </motion.div>
