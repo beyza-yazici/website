@@ -18,6 +18,16 @@
       "p3": "Benim için mühendislik sadece hesap kitap işi değil; aynı zamanda yaratıcı bir çözüm üretme süreci. Bu yolda öğrenmeye, gelişmeye ve daha iyisini yapmaya her zaman açığım.",
       "p4": "Ancak bu yolculukta en çok önem verdiğim şeylerden biri, dünyaya bıraktığımız iz. Sadece bugünü değil, geleceği de düşünerek üretmek; kaynakları verimli kullanmak ve çevreye duyarlı yapılar inşa etmek benim mesleki sorumluluğumun bir parçası.",
       "p5": "Kazanca değil, etkiye odaklanan; bugünü değil, yarını inşa eden bir vizyonla yola çıktım. Geleceğin dünyasına daha iyi bir yaşam bırakmak için mühendisliği sadece teknik bir meslek değil, insanlık için bir katkı olarak görüyorum."
+    },
+    "footer": {
+      "usefulLinks": "Faydalı Bağlantılar",
+      "contactInfo": "İletişim Bilgileri",
+      "followUs": "Bizi Takip Edin",
+      "companyDescription": "Şirket tanıtım metni buraya gelecek...",
+      "address": "Şirket adresi buraya gelecek...",
+      "allRightsReserved": "Tüm hakları saklıdır.",
+      "email": "E-posta",
+      "tel": "Tel"
     }
   }
 }
