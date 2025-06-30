@@ -12,6 +12,7 @@
   "aboutUs": {
     "title": "Hakkımızda",
     "slogan": "Bu site gelecekteki şirketi manifestlemek için aşk ile yapıldı <3",
+    "founder": "Kurucumuz",
     "paragraphs": {
       "p1": "Ben Burak Ayyıldız. İnşaat ve yapı mühendisliği alanındaki yolculuğum, her zaman sadece sağlam yapılar değil, aynı zamanda sürdürülebilir ve estetik çözümler üretme amacıyla şekillendi. Balıkesir Üniversitesi İnşaat Mühendisliği lisans eğitimimin ardından, İngiltere'de University of Liverpool'da Sürdürülebilir Yapı ve Yapısal Mühendislik üzerine yüksek lisans yaptım.",
       "p2": "Şimdiye kadar Türkiye'de ve İngiltere'de birçok projede hem sahada hem de tasarım ofisinde görev aldım. Kendi firmamı kurarken temel hedefim, işimi sadece bir mühendislik hizmeti olarak değil; çözüm odaklı, güvenilir ve sürdürülebilir bir yapı anlayışı olarak sunmaktı. Her projeye büyük bir titizlikle yaklaşır, müşteri beklentilerini mühendislik ilke ve estetikle buluşturmaya özen gösteririm.",
@@ -19,15 +20,29 @@
       "p4": "Ancak bu yolculukta en çok önem verdiğim şeylerden biri, dünyaya bıraktığımız iz. Sadece bugünü değil, geleceği de düşünerek üretmek; kaynakları verimli kullanmak ve çevreye duyarlı yapılar inşa etmek benim mesleki sorumluluğumun bir parçası.",
       "p5": "Kazanca değil, etkiye odaklanan; bugünü değil, yarını inşa eden bir vizyonla yola çıktım. Geleceğin dünyasına daha iyi bir yaşam bırakmak için mühendisliği sadece teknik bir meslek değil, insanlık için bir katkı olarak görüyorum."
     },
-    "footer": {
-      "usefulLinks": "Faydalı Bağlantılar",
-      "contactInfo": "İletişim Bilgileri",
-      "followUs": "Bizi Takip Edin",
-      "companyDescription": "Şirket tanıtım metni buraya gelecek...",
-      "address": "Şirket adresi buraya gelecek...",
-      "allRightsReserved": "Tüm hakları saklıdır.",
-      "email": "E-posta",
-      "tel": "Tel"
+    "sections": {
+      "vision": {
+        "title": "Vizyonumuz",
+        "content": "Sürdürülebilir yapı teknolojilerini kullanarak, çevreye duyarlı ve yenilikçi yaşam alanları inşa etmeyi hedefliyoruz. Gelecek nesillere daha yaşanabilir bir dünya bırakmak için yeşil bina konseptlerini her projemizde ön planda tutuyoruz. Yenilenebilir enerji kaynaklarını ve akıllı bina sistemlerini entegre ederek, sektörde öncü bir rol üstlenmeyi amaçlıyoruz."
+      },
+      "principles": {
+        "title": "Prensiplerimiz",
+        "content": "Sürdürülebilir malzeme seçimi ve enerji verimliliği, tüm projelerimizin temel prensipleridir. Karbon ayak izimizi minimize etmek için en son teknolojileri kullanıyor, atık yönetiminde sıfır atık politikasını benimsiyoruz. İş güvenliği ve çalışan refahını en üst düzeyde tutarak, sosyal sürdürülebilirliği de sağlıyoruz."
+      },
+      "values": {
+        "title": "Değerlerimiz",
+        "content": "Çevresel sorumluluğu, inovasyonu ve kaliteyi temel değerlerimiz olarak benimsiyoruz. Doğal kaynakların verimli kullanımı ve ekolojik dengenin korunması bizim için sadece bir hedef değil, bir yaşam felsefesidir. Her projemizde toplumsal faydayı gözetiyor, yerel toplulukların refahını destekliyoruz."
+      },
+      "footer": {
+        "usefulLinks": "Faydalı Bağlantılar",
+        "contactInfo": "İletişim Bilgileri",
+        "followUs": "Bizi Takip Edin",
+        "companyDescription": "Şirket tanıtım metni buraya gelecek...",
+        "address": "Şirket adresi buraya gelecek...",
+        "allRightsReserved": "Tüm hakları saklıdır.",
+        "email": "E-posta",
+        "tel": "Tel"
+      }
     }
   }
 }
